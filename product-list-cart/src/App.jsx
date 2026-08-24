@@ -3,6 +3,7 @@ import { useState } from 'react'
 
 import ProductList from './components/ProductList/ProductList.jsx'
 import productsData from './data/data.json'
+import OrderCart from './components/SideBar/OrderCart.jsx';
 
 function App() {
   const products = productsData;
@@ -37,11 +38,16 @@ function App() {
     } else {
       setCartItems(cartItems.filter(item => item.name !== product.name))
     }
-}
+
+  }
+    function handleRemove(product) {
+      setCartItems(cartItems.filter(item => item.name !== product.name))
+  }
 
   return (
     <div>
       <ProductList title="Desserts" products={products} cartItems={cartItems} onIncrement={handleIncrement} onDecrement={handleDecrement} />
+      <OrderCart cartItems={cartItems} onRemove={handleRemove} />
     </div>
   )
 }
