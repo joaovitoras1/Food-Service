@@ -9,7 +9,7 @@ function ProductCard({ product, quantity, onIncrement, onDecrement }) {
             </div>
             <p>{product.category}</p>
             <h2>{product.name}</h2>
-            <p>{product.price}</p>
+            <p>$ {product.price.toFixed(2)}</p>
         </div>
     )
 }
