@@ -4,13 +4,14 @@ import { useState } from 'react'
 import ProductList from './components/ProductList/ProductList.jsx'
 import productsData from './data/data.json'
 import OrderCart from './components/SideBar/OrderCart.jsx';
+import OrderModal from './components/OrderModal/OrderModal.jsx'
 
 function App() {
   const products = productsData;
   const [cartItems, setCartItems] = useState([]);
+  const [confirmOrder, setConfirmOrder] = useState(false);
 
   function handleIncrement(product) {
-    console.log(product)
     const exist = cartItems.find(item => item.name === product.name);
 
     if (exist) {
@@ -44,10 +45,20 @@ function App() {
       setCartItems(cartItems.filter(item => item.name !== product.name))
   }
 
+  function handleConfirmOrder() {
+    setConfirmOrder(true)
+  }
+
+  function handleNewOrder() {
+    setCartItems([]);
+    setConfirmOrder(false);
+  }
+
   return (
     <div>
       <ProductList title="Desserts" products={products} cartItems={cartItems} onIncrement={handleIncrement} onDecrement={handleDecrement} />
-      <OrderCart cartItems={cartItems} onRemove={handleRemove} />
+      <OrderCart cartItems={cartItems} onRemove={handleRemove} onConfirmOrder={handleConfirmOrder} />
+      {confirmOrder && <OrderModal cartItems={cartItems} onNewOrder={handleNewOrder} />}
     </div>
   )
 }
