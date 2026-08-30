@@ -3,7 +3,7 @@ import { useState } from 'react'
 
 import ProductList from './components/ProductList/ProductList.jsx'
 import productsData from './data/data.json'
-import OrderCart from './components/SideBar/OrderCart.jsx';
+import OrderCart from './components/OrderCart/OrderCart.jsx';
 import OrderModal from './components/OrderModal/OrderModal.jsx'
 
 function App() {
