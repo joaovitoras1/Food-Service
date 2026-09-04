@@ -55,10 +55,12 @@ function App() {
   }
 
   return (
-    <div>
+    <div className="max-w-full h-full border-box grid justify-center p-5 font-red-hat-text bg-rose-50">
       <ProductList title="Desserts" products={products} cartItems={cartItems} onIncrement={handleIncrement} onDecrement={handleDecrement} />
       <OrderCart cartItems={cartItems} onRemove={handleRemove} onConfirmOrder={handleConfirmOrder} />
-      {confirmOrder && <OrderModal cartItems={cartItems} onNewOrder={handleNewOrder} />}
+      <div className="pt-5">
+        {confirmOrder && <OrderModal cartItems={cartItems} onNewOrder={handleNewOrder} />}  
+      </div>
     </div>
   )
 }

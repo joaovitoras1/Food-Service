@@ -3,7 +3,7 @@ import ProductCard from './ProductCard/ProductCard.jsx'
 function ProductList({ title, products, cartItems, onIncrement, onDecrement }) {
     return (
         <div>
-            <h1>{title}</h1>
+            <h1 className="text-[40px] font-bold pb-2.5 text-rose-900">{title}</h1>
             <ul>
                 {products.map((product) => {
                     const itemInTheCart = cartItems.find(item => item.name === product.name);
