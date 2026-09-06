@@ -15,7 +15,7 @@ function OrderCart({ cartItems, onRemove, onConfirmOrder }) {
                 <ul>
                     {cartItems.map(item => <CartItem key={item.name} item={item} onRemove={onRemove} showImage={false} showRemoveButton={true} />)}
                 </ul>
-                <div className="flex items-center justify-between pt-2 pb-4">
+                <div className="flex items-center justify-between pt-3 pb-4">
                     <p className="text-sm text-rose-900">Order total</p>
                     <p className="text-2xl font-bold text-rose-900">${totalCartPrice.toFixed(2)}</p>
                 </div>
