@@ -20,8 +20,8 @@ function OrderModal({ cartItems, onNewOrder }) {
                             })}
                         </ul>
                         <div className="px-4 pb-4 flex items-center justify-between">
-                            <p className="text-sm text-rose-900">Order Total</p>
-                            <p className="text-2xl font-bold text-rose-900">${totalCartPrice.toFixed(2)}</p>
+                            <p className="pl-2 text-sm text-rose-900">Order Total</p>
+                            <p className="pr-2 text-2xl font-bold text-rose-900">${totalCartPrice.toFixed(2)}</p>
                         </div>
                     </div>
                     <button onClick={() => onNewOrder()} className="p-3 rounded-3xl bg-red text-rose-50">Start New Order</button>
