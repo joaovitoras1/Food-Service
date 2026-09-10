@@ -6,7 +6,7 @@ function OrderModal({ cartItems, onNewOrder }) {
 
     return (
         <div className="flex items-end justify-center fixed inset-0 bg-black/50">
-            <div className="bg-white rounded-t-2xl fixed left-0 right-0">
+            <div className="bg-white rounded-t-2xl fixed left-0 right-0 md:left-70 md:right-70">
                 <div className="px-5 py-8 flex flex-col gap-5">
                     <div>
                         <img src={ConfirmedIcon} />
@@ -24,7 +24,7 @@ function OrderModal({ cartItems, onNewOrder }) {
                             <p className="pr-2 text-2xl font-bold text-rose-900">${totalCartPrice.toFixed(2)}</p>
                         </div>
                     </div>
-                    <button onClick={() => onNewOrder()} className="p-3 rounded-3xl bg-red text-rose-50">Start New Order</button>
+                    <button onClick={() => onNewOrder()} className="p-3 rounded-3xl bg-red hover:bg-orange-900 text-rose-50 cursor-grab">Start New Order</button>
                 </div>
             </div>
         </div>

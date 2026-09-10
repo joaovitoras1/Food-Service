@@ -24,7 +24,7 @@ function CartItem({ item, showImage, showRemoveButton, onRemove }) {
                         <p className="text-sm text-rose-500">@ ${item.price.toFixed(2)}</p>
                         <p className="text-sm font-semibold text-rose-500">${subtotal.toFixed(2)}</p>
                     </div>
-                    {showRemoveButton && <div className="flex pb-2 relative bottom-2"><button onClick={() => onRemove(item)} className="p-0.5 border rounded-[50%] border-rose-400"><img src={removeItemIcon} /></button></div>}
+                    {showRemoveButton && <div className="flex pb-2 relative bottom-2"><button onClick={() => onRemove(item)} className="p-0.5 border rounded-[50%] border-rose-400 cursor-grab"><img src={removeItemIcon} /></button></div>}
                 </div>
             </div>}
         </li>

@@ -55,7 +55,7 @@ function App() {
   }
 
   return (
-    <div className="max-w-full h-full border-box grid justify-center p-5 font-red-hat-text bg-rose-50">
+    <div className="max-w-full min-h-screen border-box grid justify-center p-5 font-red-hat-text bg-rose-50 md:flex md:flex-col">
       <ProductList title="Desserts" products={products} cartItems={cartItems} onIncrement={handleIncrement} onDecrement={handleDecrement} />
       <OrderCart cartItems={cartItems} onRemove={handleRemove} onConfirmOrder={handleConfirmOrder} />
       <div className="pt-5">
