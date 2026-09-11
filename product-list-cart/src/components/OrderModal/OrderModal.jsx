@@ -5,8 +5,8 @@ function OrderModal({ cartItems, onNewOrder }) {
     const totalCartPrice = cartItems.reduce((acc, item) => acc + item.price * item.quantity, 0);
 
     return (
-        <div className="flex items-end justify-center fixed inset-0 bg-black/50">
-            <div className="bg-white rounded-t-2xl fixed left-0 right-0 md:left-70 md:right-70">
+        <div className="flex items-end justify-center fixed inset-0 bg-black/50 lg:items-center xl:flex xl:items-center">
+            <div className="bg-white rounded-t-2xl fixed left-0 right-0 lg:left-70 lg:right-70 lg:rounded-2xl xl:w-3xl xl:m-auto">
                 <div className="px-5 py-8 flex flex-col gap-5">
                     <div>
                         <img src={ConfirmedIcon} />

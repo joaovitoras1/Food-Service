@@ -8,9 +8,9 @@ function OrderCart({ cartItems, onRemove, onConfirmOrder }) {
     const totalCartPrice = cartItems.reduce((acc, item) => acc + item.price * item.quantity, 0);
     
     return (
-        <div className="bg-white py-5 px-6 rounded-xl ">
-            <h2 className="font-bold text-[25px] pb-2 text-red">Your Cart ({totalCartItems})</h2>
-            {cartItems.length === 0 ? <div className="flex flex-col items-center gap-2 p-5 "><img src={emptyCartIcon} /><p className="pt-2 font-semibold text-sm text-rose-500">Your added items will appear here</p></div> : 
+        <div className="bg-white py-5 px-6 rounded-xl md:h-fit">
+            <h2 className="font-bold text-[25px] text-red">Your Cart ({totalCartItems})</h2>
+            {cartItems.length === 0 ? <div className="flex flex-col items-center gap-2 p-5 lg:p-8"><img src={emptyCartIcon} /><p className="pt-2 font-semibold text-sm text-rose-500">Your added items will appear here</p></div> : 
             <div>
                 <ul>
                     {cartItems.map(item => <CartItem key={item.name} item={item} onRemove={onRemove} showImage={false} showRemoveButton={true} />)}
